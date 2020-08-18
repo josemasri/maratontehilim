@@ -4,8 +4,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Grid,
-  Box,
   useTheme,
 } from "@material-ui/core";
 import "normalize.css/normalize.css";
@@ -36,7 +34,7 @@ const useStyles = makeStyles({
     color: "white",
     padding: "0.5rem",
     fontSize: "0.8rem",
-    textAlign: "center"
+    textAlign: "center",
   },
 });
 
