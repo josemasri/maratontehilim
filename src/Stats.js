@@ -5,6 +5,10 @@ import { Loading } from "./Loading";
 import Axios from "axios";
 
 const useStyles = makeStyles({
+  card: {
+    marginTop: "1rem",
+    marginBottom: "3rem",
+  },
   statsTitle: {
     textAlign: "center",
     marginTop: "1rem",
@@ -24,7 +28,7 @@ export const Stats = () => {
     getInfo();
   }, []);
   return (
-    <Card>
+    <Card className={classes.card}>
       {!info ? (
         <CardContent>
           <Loading />
@@ -32,26 +36,26 @@ export const Stats = () => {
       ) : (
         <CardContent>
           <div>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="primary">
               Número de tehilims repartidos:
             </Typography>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="secondary">
               <ReactCountUp delay={10} endVal={info.tehilimsReaded} />
             </Typography>
           </div>
           <div>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="primary">
               Número de participantes:
             </Typography>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="secondary">
               <ReactCountUp delay={10} endVal={info.numberUsers} />
             </Typography>
           </div>
           <div>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="primary">
               Veces que se completará el tehilim:
             </Typography>
-            <Typography className={classes.statsTitle} variant="h5">
+            <Typography className={classes.statsTitle} variant="h5" color="secondary">
               <ReactCountUp delay={10} endVal={info.rounds} />
             </Typography>
           </div>
