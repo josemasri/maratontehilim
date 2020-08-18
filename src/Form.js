@@ -10,12 +10,9 @@ import {
   InputLabel,
   MenuItem,
   Button,
-  ListItem,
-  ListItemText,
 } from "@material-ui/core";
 import Swal from "sweetalert2";
 import Axios from "axios";
-import { FixedSizeList } from "react-window";
 import { Loading } from "./Loading";
 
 const useStyles = makeStyles({
@@ -32,7 +29,7 @@ const useStyles = makeStyles({
     marginTop: "1rem",
   },
   list: {
-    margin: '2rem 0',
+    margin: "2rem 0",
     fontSize: "1.5rem",
     fontWeight: "bold",
     textAlign: "center",
@@ -76,8 +73,11 @@ export const Form = () => {
       });
       return;
     }
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!re.test(formState.email.trim().toLowerCase())) {
+    if (
+      !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        formState.email.trim().toLowerCase()
+      )
+    ) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
