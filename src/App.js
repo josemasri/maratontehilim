@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/styles";
 import { Form } from "./Form";
 import logoPink from "./assets/logoPink.png";
 import logoCuarentena from "./assets/logoCuarentena.png";
+import { Stats } from "./Stats";
 
 const useStyles = makeStyles({
   title: {
@@ -65,6 +66,7 @@ function App() {
           />
         </div>
         <Form />
+        <Stats />
       </Container>
       <div
         style={{ backgroundColor: theme.palette.primary.main }}
