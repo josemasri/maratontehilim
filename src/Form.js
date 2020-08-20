@@ -34,6 +34,9 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     textAlign: "center",
   },
+  mt1: {
+    marginTop: "1rem",
+  }
 });
 
 export const Form = () => {
@@ -151,7 +154,7 @@ export const Form = () => {
                 <MenuItem value={20}>50</MenuItem>
               </Select>
             </FormControl>
-            <Typography variant="h5">Haz tus pedidos (*opcional)</Typography>
+            <Typography variant="h5" className={classes.mt1}>Haz tus pedidos (*opcional)</Typography>
             <TextField
               className={classes.w100}
               type="text"
