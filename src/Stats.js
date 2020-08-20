@@ -37,7 +37,7 @@ export const Stats = () => {
         <CardContent>
           <div>
             <Typography className={classes.statsTitle} variant="h5" color="primary">
-              Número de tehilims repartidos:
+              Número de tehilim repartidos:
             </Typography>
             <Typography className={classes.statsTitle} variant="h5" color="secondary">
               <ReactCountUp delay={10} endVal={info.tehilimsReaded} />

@@ -151,7 +151,7 @@ export const Form = () => {
                 <MenuItem value={20}>50</MenuItem>
               </Select>
             </FormControl>
-            <Typography variant="h3">Haz tus pedidos (*opcional)</Typography>
+            <Typography variant="h5">Haz tus pedidos (*opcional)</Typography>
             <TextField
               className={classes.w100}
               type="text"
