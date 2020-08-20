@@ -135,7 +135,7 @@ export const Form = () => {
             />
 
             <FormControl className={classes.w100}>
-              <InputLabel id="quantity">Cantidad de Tehilims</InputLabel>
+              <InputLabel id="quantity">Cantidad de Tehilim</InputLabel>
               <Select
                 labelId="quantity"
                 id="quantitySelect"
@@ -226,7 +226,7 @@ export const Form = () => {
             Felicidades, ya eres parte de este maratón!!!
           </Typography>
           <Typography className={classes.textCenter} variant="h5">
-            Tus tehilims asignados son:
+            Tus tehilim asignados son:
           </Typography>
           <div className={classes.list}>
             {tehilims.map((tehilim) => (
