@@ -41,6 +41,12 @@ export const Form = () => {
   const [formState, setFormState] = useState({
     email: "",
     quantity: "",
+    beraja: "",
+    refua: "",
+    zibug: "",
+    zera: "",
+    leiluy: "",
+    matir: "",
   });
 
   const [tehilims, setTehilims] = useState([]);
@@ -91,8 +97,13 @@ export const Form = () => {
       const res = await Axios.post(`${process.env.REACT_APP_APIURL}/tehilim`, {
         mail: formState.email,
         quantity: formState.quantity,
+        beraja: formState.beraja,
+        refua: formState.refua,
+        zibug: formState.zibug,
+        zera: formState.zera,
+        leiluy: formState.leiluy,
+        matir: formState.matir,
       });
-      console.log(res.data);
       setTehilims(res.data.tehilims);
       setLoading(false);
     } catch (error) {
@@ -122,6 +133,7 @@ export const Form = () => {
               value={formState.email}
               onChange={handleChange}
             />
+
             <FormControl className={classes.w100}>
               <InputLabel id="quantity">Cantidad de Tehilims</InputLabel>
               <Select
@@ -139,6 +151,61 @@ export const Form = () => {
                 <MenuItem value={20}>50</MenuItem>
               </Select>
             </FormControl>
+            <Typography variant="h3">Haz tus pedidos (*opcional)</Typography>
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Beraja y Hatzlaja"
+              name="beraja"
+              helperText="Bendiciones y abundancia"
+              value={formState.beraja}
+              onChange={handleChange}
+            />
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Refua Shelema"
+              name="refua"
+              helperText="Salud"
+              value={formState.refua}
+              onChange={handleChange}
+            />
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Zibuj Hagun"
+              name="zibug"
+              helperText="Encontrar Pareja"
+              value={formState.zibug}
+              onChange={handleChange}
+            />
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Zera shel kayama"
+              name="zera"
+              helperText="Poder quedar embarazada"
+              value={formState.zera}
+              onChange={handleChange}
+            />
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Leiluy Nishmat"
+              name="leiluy"
+              helperText="Por los fallecidos"
+              value={formState.leiluy}
+              onChange={handleChange}
+            />
+            <TextField
+              className={classes.w100}
+              type="text"
+              label="Matir Asurim"
+              name="leiluy"
+              helperText="Para salir de algún problema"
+              value={formState.matir}
+              onChange={handleChange}
+            />
             {loading ? (
               <Loading />
             ) : (
