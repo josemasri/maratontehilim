@@ -40,7 +40,7 @@ export const Stats = () => {
               Número de tehilim repartidos:
             </Typography>
             <Typography className={classes.statsTitle} variant="h5" color="secondary">
-              <ReactCountUp delay={10} endVal={info.tehilimsReaded} />
+              <ReactCountUp delay={10} endVal={1524} />
             </Typography>
           </div>
           <div>
@@ -48,7 +48,7 @@ export const Stats = () => {
               Número de participantes:
             </Typography>
             <Typography className={classes.statsTitle} variant="h5" color="secondary">
-              <ReactCountUp delay={10} endVal={info.numberUsers} />
+              <ReactCountUp delay={10} endVal={1101} />
             </Typography>
           </div>
           <div>
@@ -56,7 +56,7 @@ export const Stats = () => {
               Veces que se completará el tehilim:
             </Typography>
             <Typography className={classes.statsTitle} variant="h5" color="secondary">
-              <ReactCountUp delay={10} endVal={info.rounds} />
+              <ReactCountUp delay={10} endVal={101} />
             </Typography>
           </div>
         </CardContent>
