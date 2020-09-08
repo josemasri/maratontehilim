@@ -40,7 +40,7 @@ export const Stats = () => {
               Número de tehilim repartidos:
             </Typography>
             <Typography className={classes.statsTitle} variant="h5" color="secondary">
-              <ReactCountUp delay={10} endVal={1524} />
+              <ReactCountUp delay={10} endVal={15043} />
             </Typography>
           </div>
           <div>
