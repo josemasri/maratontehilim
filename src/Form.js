@@ -154,7 +154,7 @@ export const Form = () => {
                 <MenuItem value={20}>50</MenuItem>
               </Select>
             </FormControl>
-            <Typography variant="h5" className={classes.mt1}>Haz tus pedidos (*opcional)</Typography>
+            {/* <Typography variant="h5" className={classes.mt1}>Haz tus pedidos (*opcional)</Typography>
             <TextField
               className={classes.w100}
               type="text"
@@ -208,7 +208,7 @@ export const Form = () => {
               helperText="Para salir de algún problema"
               value={formState.matir}
               onChange={handleChange}
-            />
+            /> */}
             {loading ? (
               <Loading />
             ) : (
