@@ -1,41 +1,40 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   AppBar,
   Toolbar,
   Typography,
   useTheme,
-} from "@material-ui/core";
-import "normalize.css/normalize.css";
-import { makeStyles } from "@material-ui/styles";
-import { Form } from "./Form";
-import logoPink from "./assets/logoPink.png";
-import logoCuarentena from "./assets/logoCuarentena.png";
-import { Stats } from "./Stats";
+} from '@material-ui/core';
+import 'normalize.css/normalize.css';
+import { makeStyles } from '@material-ui/styles';
+import { Form } from './Form';
+import logoPink from './assets/logo.jpeg';
+import { Stats } from './Stats';
 
 const useStyles = makeStyles({
   title: {
-    margin: "0 auto",
+    margin: '0 auto',
   },
   logo: {
-    height: "10rem",
-    width: "10rem",
+    height: '10rem',
+    width: '10rem',
   },
   grid: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: "1rem",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '1rem',
   },
   navbar: {
-    overflow: "hidden",
-    position: "fixed",
+    overflow: 'hidden',
+    position: 'fixed',
     bottom: 0,
-    width: "100%",
-    color: "white",
-    padding: "0.5rem",
-    fontSize: "0.8rem",
-    textAlign: "center",
+    width: '100%',
+    color: 'white',
+    padding: '0.5rem',
+    fontSize: '0.8rem',
+    textAlign: 'center',
   },
 });
 
@@ -56,12 +55,6 @@ function App() {
           <img
             className={classes.logo}
             src={logoPink}
-            alt="logo tora cuarentena"
-          />
-
-          <img
-            className={classes.logo}
-            src={logoCuarentena}
             alt="logo tora cuarentena"
           />
         </div>
